@@ -1,67 +1,78 @@
-<header class="bg-azulheader py-8 shadow-md font-fira-sans text-xl left-0 right-0 z-10 flex justify-between items-center px-4">
-  <div class="flex items-center">
-    <img src="assets/nodomix.png" />          
-  </div>
+<header class="bg-naranja py-8 shadow-md font-fira-sans text-xl left-0 right-0 z-10 flex justify-between items-center px-4">
+
   <div class="flex space-x-4 mr-8 ">
-    <button [routerLink]="['/loguin']"class=" border  border-gray-400 hover:bg-aguadegad text-white px-4 py-2 rounded focus:outline-none focus:ring focus:ring-blue-300">
-      Ingresa
+    <button [routerLink]="['/loguin']"class=" border 400  hover:bg-amarillo text-white px-4 py-2 rounded focus:outline-none focus:ring focus:ring-blue-300">
+      Inicio
     </button>
-    <button [routerLink]="['/activate']" class="border border-gray-400 hover:bg-aguadegad text-white px-4 py-2 rounded focus:outline-none focus:ring focus:ring-green-300">
-      Activate
+    <button onclick="location.href='#quienes-somos'" class="border hover:bg-amarillo text-white px-4 py-2 rounded focus:outline-none focus:ring focus:ring-green-300">
+      ¿Quienes Somos?
+    </button>
+       <button onclick="location.href='#nuestros-programas'" class="border hover:bg-amarillo text-white px-4 py-2 rounded focus:outline-none focus:ring focus:ring-green-300">
+      Nuestros Programas
+    </button>
+          <button [routerLink]="['/activate']" class="border hover:bg-amarillo text-white px-4 py-2 rounded focus:outline-none focus:ring focus:ring-green-300">
+      Galeria
     </button>
   </div>
 </header>
 
 
 
+<div class="relative w-full h-[650px] bg-cover bg-center" style="background-image: url('./assets/mqt.png')">
 
-<div class=" bg-cover relative lg:block w-full h-96 mb-10" style="background-image: url('./assets/lab.jpg')">
-  <div class="  h-full  bg-gray-900 bg-opacity-40 backdrop-blur-sm mt-10 ">
-    <h1  class="max-w-xl text-white text-6xl ">Laboratorio futuros</h1>
-    <h2 class="  text-white absolute bottom-0 right-0 max-w-xl text-xl text-white">
-      Estamos encantados de darte la bienvenida a nuestro espacio de innovación y creatividad en la Universidad Eafit.
-      En Laboratorio Futuros, te ofrecemos la oportunidad de reservar tus puestos de trabajo de manera fácil y remota,
-      brindándote la flexibilidad y comodidad que necesitas para potenciar tus proyectos y explorar nuevas ideas.</h2>
+  <!-- Texto FUNDACIÓN -->
+  <div class="absolute bottom-24 w-full text-center text-white text-5xl font-semibold">
+    FUNDACIÓN
   </div>
-</div>
-<div class="flex flex-col items-center mb-10 ">
-  <h1 class="text-2xl font-bold mb-4 text-azuldegra">Próximos Eventos</h1>
-  <div class="flex justify-center md:max-w-6xl">
-    <div class="m-4 text-center font-bold">
-      <img src="./assets/Evento1.jpg" alt="Evento 1" class="max-w-full">
-      <p class="mt-2">Atrevete y prueba tus conocimientos en nuestra hackathon.</p>
-    </div>
-    <div class="m-4 text-center font-bold">
-      <img src="./assets/Evento2.jpg" alt="Evento 2" class="max-w-full">
-      <p class="mt-2">ven y conversa sobre la AI con una mujer insignia.</p>
-    </div>
+
+  <!-- Franja amarilla con texto -->
+  <div class="absolute bottom-0  w-full bg-amarillo text-center text-white text-6xl font-bold py-4">
+    MANOS QUE TEJEN FUTURO
   </div>
+
 </div>
-<div class="flex flex-col items-center mb-10 ">
-  <h1 class="text-2xl font-bold mb-4 text-azuldegra">Acerca de nodo</h1>
-  <h1 class="text-xl font-bold mb-4 text-azuldegra">Descubre nuestros cursos.</h1>
-  
-  <div class="flex flex-col justify-center md:max-w-6xl md:flex-row ">
-    <div class="m-4 text-center font-bold flex-wrap ">
-      <img src="./assets/fundamentals.jpg" alt="Evento 1" class="max-w-full ">
-      <p class="mt-2 ">Fundamentals, <a class="underline underline-offset-1 text-azuldegra" href="https://nodoeafit.com/curso/1/fundamentals" target="_blank"><i>Saber mas.</i></a></p>
+
+<section id="quienes-somos" class="w-full py-12 px-6 bg-crema 100">
+  <h2 class="text-4xl font-bold text-left mb-6 text-azuldegra 800 max-w-4xl mx-auto ml-12">¿Quiénes Somos?</h2>
+  <p class=" text-amarillo 700 text-justify  ml-12 text-4xl">
+    Promovemos el desarrollo integral de mujeres, niños, niñas y jovenes; mediante procesos formativos, espirituales y comunitarios
+  </p>
+</section>
+
+<section id="nuestros-programas" class="w-full py-12 px-6 bg-azuldegra 100">
+
+  <h2 class="text-5xl font-bold text-center mb-6 text-crema 800">
+    Nuestros programas
+  </h2>
+
+  <div class="flex flex-wrap justify-center gap-6">
+    <!-- Tarjeta 1 -->
+    <div class="bg-crema 100 rounded-lg shadow-md p-4 w-60">
+      <img src="assets/estrellitas.png" alt="Estrellitas Marianas Vicentinas" class="mx-auto mb-4">
+      <p class="font-bold text-pink-600 text-center">Estrellitas Marianas Vicentinas</p>
     </div>
-    <div class="m-4 text-center font-bold">
-      <img src="./assets/frontend.jpg" alt="Evento 2" class="max-w-full">
-      <p class="mt-2">Front end, <a class="underline underline-offset-1 text-azuldegra" href="https://nodoeafit.com/curso/2/frontend" target="_blank"><i>Saber mas.</i></a></p>
+
+    <div class="bg-crema rounded-lg shadow-md p-4 w-60">
+      <img src="assets/pre.jpg" alt="Prejuvenil Mariano Vicentino" class="mx-auto mb-4">
+      <p class="font-bold text-amarillo text-center">Prejuvenil Mariano Vicentino</p>
     </div>
-    <div class="m-4 text-center font-bold">
-      <img src="./assets/backend.jpg" alt="Evento 2" class="max-w-full">
-      <p class="mt-2">Backend, <a class="underline underline-offset-1 text-azuldegra" href="https://nodoeafit.com/curso/3/backend" target="_blank"><i>Saber mas.</i></a></p>
+
+<div class="bg-white rounded-lg shadow-md p-4 w-60">
+      <img src="assets/jv.png" alt="Juventudes Marianas Vicentinas" class="mx-auto mb-4">
+      <p class="font-bold text-cyan-600 text-center" >Juventudes Marianas Vicentinas</p>
     </div>
-    <div class="m-4 text-center font-bold">
-      <img src="./assets/cloud.jpg" alt="Evento 2" class="max-w-full">
-      <p class="mt-2">Cloud native, <a class="underline underline-offset-1 text-azuldegra" href="https://nodoeafit.com/curso/2019/cloud-native" target="_blank"><i>Saber mas.</i></a></p>
+      
+
+
+      <!-- Tarjeta 4 -->
+    <div class="bg-white rounded-lg shadow-md p-4 w-60">
+      <img src="assets/sembradoras.png" alt="Sembradoras de Sueños" class="mx-auto mb-4">
+      <p class="font-bold text-orange-600">Sembradoras de Sueños</p>
     </div>
-    <div class="m-4 text-center font-bold">
-      <img src="./assets/phyton.jpg" alt="Evento 2" class="max-w-full">
-      <p class="mt-2">Phyton <a class="underline underline-offset-1 text-azuldegra" href="https://nodoeafit.com/curso/2026/python" target="_blank"><i>Saber mas.</i></a></p>
+
     </div>
-  </div>
-</div>
+ </section>
+
+
+
 <app-footer></app-footer>

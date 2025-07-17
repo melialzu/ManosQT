@@ -5,9 +5,11 @@ module.exports = {
     extend: {
       colors: {
         aguadegad: "#00C99F",
-        azuldegra: "#346BEC",
+        azuldegra: "#10a09a",
         azulheader: "#010068",
-        naranja: "#FF9F33"
+        naranja: "#de6d21",
+        amarillo: "#e29508",
+        crema:"#fff3d1"
       },
       zIndex: {
         '100': '100',

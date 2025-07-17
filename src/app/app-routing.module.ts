@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'confirmar-reserva', component: ConfirmarReservaComponent },
   { path: 'loguin', component: LoguinComponent },
   { path: 'activate', component: UsersComponent},
-    {path: ' ', component: Pagina1Component, pathMatch: 'full'},
+   { path: '', component: Pagina1Component, pathMatch: 'full' }
+
  
 ];
 
