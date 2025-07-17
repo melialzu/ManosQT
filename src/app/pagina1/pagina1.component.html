@@ -1,0 +1,67 @@
+<header class="bg-azulheader py-8 shadow-md font-fira-sans text-xl left-0 right-0 z-10 flex justify-between items-center px-4">
+  <div class="flex items-center">
+    <img src="assets/nodomix.png" />          
+  </div>
+  <div class="flex space-x-4 mr-8 ">
+    <button [routerLink]="['/loguin']"class=" border  border-gray-400 hover:bg-aguadegad text-white px-4 py-2 rounded focus:outline-none focus:ring focus:ring-blue-300">
+      Ingresa
+    </button>
+    <button [routerLink]="['/activate']" class="border border-gray-400 hover:bg-aguadegad text-white px-4 py-2 rounded focus:outline-none focus:ring focus:ring-green-300">
+      Activate
+    </button>
+  </div>
+</header>
+
+
+
+
+<div class=" bg-cover relative lg:block w-full h-96 mb-10" style="background-image: url('./assets/lab.jpg')">
+  <div class="  h-full  bg-gray-900 bg-opacity-40 backdrop-blur-sm mt-10 ">
+    <h1  class="max-w-xl text-white text-6xl ">Laboratorio futuros</h1>
+    <h2 class="  text-white absolute bottom-0 right-0 max-w-xl text-xl text-white">
+      Estamos encantados de darte la bienvenida a nuestro espacio de innovación y creatividad en la Universidad Eafit.
+      En Laboratorio Futuros, te ofrecemos la oportunidad de reservar tus puestos de trabajo de manera fácil y remota,
+      brindándote la flexibilidad y comodidad que necesitas para potenciar tus proyectos y explorar nuevas ideas.</h2>
+  </div>
+</div>
+<div class="flex flex-col items-center mb-10 ">
+  <h1 class="text-2xl font-bold mb-4 text-azuldegra">Próximos Eventos</h1>
+  <div class="flex justify-center md:max-w-6xl">
+    <div class="m-4 text-center font-bold">
+      <img src="./assets/Evento1.jpg" alt="Evento 1" class="max-w-full">
+      <p class="mt-2">Atrevete y prueba tus conocimientos en nuestra hackathon.</p>
+    </div>
+    <div class="m-4 text-center font-bold">
+      <img src="./assets/Evento2.jpg" alt="Evento 2" class="max-w-full">
+      <p class="mt-2">ven y conversa sobre la AI con una mujer insignia.</p>
+    </div>
+  </div>
+</div>
+<div class="flex flex-col items-center mb-10 ">
+  <h1 class="text-2xl font-bold mb-4 text-azuldegra">Acerca de nodo</h1>
+  <h1 class="text-xl font-bold mb-4 text-azuldegra">Descubre nuestros cursos.</h1>
+  
+  <div class="flex flex-col justify-center md:max-w-6xl md:flex-row ">
+    <div class="m-4 text-center font-bold flex-wrap ">
+      <img src="./assets/fundamentals.jpg" alt="Evento 1" class="max-w-full ">
+      <p class="mt-2 ">Fundamentals, <a class="underline underline-offset-1 text-azuldegra" href="https://nodoeafit.com/curso/1/fundamentals" target="_blank"><i>Saber mas.</i></a></p>
+    </div>
+    <div class="m-4 text-center font-bold">
+      <img src="./assets/frontend.jpg" alt="Evento 2" class="max-w-full">
+      <p class="mt-2">Front end, <a class="underline underline-offset-1 text-azuldegra" href="https://nodoeafit.com/curso/2/frontend" target="_blank"><i>Saber mas.</i></a></p>
+    </div>
+    <div class="m-4 text-center font-bold">
+      <img src="./assets/backend.jpg" alt="Evento 2" class="max-w-full">
+      <p class="mt-2">Backend, <a class="underline underline-offset-1 text-azuldegra" href="https://nodoeafit.com/curso/3/backend" target="_blank"><i>Saber mas.</i></a></p>
+    </div>
+    <div class="m-4 text-center font-bold">
+      <img src="./assets/cloud.jpg" alt="Evento 2" class="max-w-full">
+      <p class="mt-2">Cloud native, <a class="underline underline-offset-1 text-azuldegra" href="https://nodoeafit.com/curso/2019/cloud-native" target="_blank"><i>Saber mas.</i></a></p>
+    </div>
+    <div class="m-4 text-center font-bold">
+      <img src="./assets/phyton.jpg" alt="Evento 2" class="max-w-full">
+      <p class="mt-2">Phyton <a class="underline underline-offset-1 text-azuldegra" href="https://nodoeafit.com/curso/2026/python" target="_blank"><i>Saber mas.</i></a></p>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

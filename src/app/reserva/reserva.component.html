@@ -1,0 +1,78 @@
+
+<app-header></app-header>
+<app-navbar></app-navbar>
+
+<div class="w-full h-screen flex justify-center items-center text-black bg-white pl-10">
+  
+
+    <section class="max-w-full w-96  md:items-start p-8 border-2 border-aguadegad rounded-lg">
+        <h2 class="text-white text-3xl font-bo.ld mb-4 text-center bg-gradient-to-r from-aguadegad to bg-azuldegra">Reserva tu puesto</h2>
+
+        
+
+        <form   [formGroup]= "reservaForm" class="flex flex-col gap-4"(ngSubmit) = "reserva()">
+
+            <label for="fechaReserva">
+                <span> Seleccione el día para el que desea reservar:</span>       
+                <input type="date" class = "text-black mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-aguadegad focus:ring-opacity-50 " name="fechaReserva" id="fechaReserva" formControlName = "fechaReserva" (change)="onDateChange($event)">
+                <div *ngIf="dateInPast" class="text-red-500 mt-1"> Por favor selecciona una fecha en el presente!</div>
+            </label>
+
+            <label for="horaReserva">
+                <span>Selecciona la hora de inicio de tu reserva:</span>
+           
+                <select id="horaReserva" (change)="onTimeChange($event)" *ngIf="!dateInPast" formControlName="horaReserva" class="text-black mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-aguadegad focus:ring-opacity-50" >
+                    <option value="08:00" >08:00</option>
+                    <option value="09:00" >09:00</option>
+                    <option value="10:00" >10:00</option>
+                    <option value="11:00" >11:00</option>
+                    <option value="12:00" >12:00</option>
+                    <option value="13:00" >13:00</option>
+                    <option value="14:00" >14:00</option>
+                    <option value="15:00" >15:00</option>
+                    <option value="16:00" >16:00</option>
+                    <option value="17:00" >17:00</option>
+                </select>  
+            </label>
+
+            <label for="tiempoReserva" *ngIf="!dateInPast"  >
+                <span >Selecciona el tiempo que deseas reservar: </span> 
+            </label>
+            
+            <label *ngIf="!dateInPast">
+                <input type="radio" name="tiempoReserva" class="mt-1 inline-flex border-gray-300 shadow-sm  focus:border-aguadegad  focus:ring-aguadegad focus:ring-opacity-50" value="1 hora" formControlName="tiempoReserva">1 hora
+            </label>
+            <label *ngIf="showThreeHourOption && !dateInPast">   
+                <input type="radio"   name="tiempoReserva" class="mt-1 inline-flex border-gray-300 shadow-sm  focus:border-aguadegad  focus:ring-aguadegad focus:ring-opacity-50" value="3 horas" formControlName="tiempoReserva">3 horas 
+           
+            </label>
+            
+
+
+            <label for="espacio " *ngIf="!dateInPast">
+                <span>Selecciona el espacio:</span>
+            
+                <select type="text" class="text-black mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-aguadegad focus:ring-opacity-50"  name="espacio" id="espacio" formControlName = "espacio">           
+                    <option value="Percepción" >Percepción</option>
+                    <option value="Creación" >Creación</option>
+                    <option value="Espacio Completo" >Espacio completo</option>
+                </select>
+            </label>
+              
+
+
+        
+
+                <button  *ngIf="!dateInPast" class="w-full px-4 py-2 tracking-wide font-bold text-white transition-colors duration-200 transform bg-aguadegad rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50" type = "submit">
+                  
+                    Reservar
+                </button>  
+            
+
+        </form>  
+       
+    </section>
+
+   
+</div>
+<app-footer></app-footer>

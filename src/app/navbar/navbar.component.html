@@ -1,0 +1,41 @@
+<div class="min-h-screen flex flex-row fixed top-0 z-100 ">
+
+  <div class="sidebar flex flex-col w-56 " [ngClass]="{ 'w-56': isSidebarOpen, 'w-0': !isSidebarOpen }" (mouseenter)="showSidebar()"      (mouseleave)="hideSidebar() ">
+    <ul class="flex flex-col py-4 menu bg-azulheader h-screen">
+      <li>
+        <a [routerLink]="['/landing']"class="px-4 flexitems-center h-12 transform transition-transform ease-in duration-150">
+          <fa-icon  [icon]="faHouse"class="icon text-3xl text-white"></fa-icon>
+          <span class="text-lg font-sans-serif text text-white">Inicio</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="px-4 flexitems-center h-12 transform transition-transform ease-in duration-150">
+          <fa-icon [icon]="faPersonBooth" class="icon text-3xl text-white"></fa-icon>
+          <span class="text-lg font-sans-serif text text-white">Showroom</span>
+        </a>
+      </li>
+
+      <li>
+        <a [routerLink]="['/reserva']" class="px-4 flexitems-center h-12 transform transition-transform ease-in duration-150" >
+          <fa-icon [icon]="faCalendar" class="icon text-3xl text-white" ></fa-icon>
+          <span class="text-lg font-sans-serif text text-white">Reservar aquí</span   >
+        </a>
+      </li>
+
+      <li>
+        <a [routerLink]="['/misreservas']"class="px-4 flexitems-center h-12 transform transition-transform ease-in duration-150">
+          <fa-icon [icon]="faCalendarDays" class="icon text-3xl text-white" ></fa-icon>
+          <span class="text-lg font-sans-serif text text-white">Mis reservas</span   >
+        </a>
+      </li>
+
+      <li>
+        <a  class="px-4 flexitems-center h-12 transform  transition-transform ease-in duration-150" (click)="logout()" >
+          <fa-icon [icon]="faRightFromBracket" class="icon text-3xl text-white "></fa-icon>
+          <span class="text-lg font-sans-serif text text-white">Cerrar sesión</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

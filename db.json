@@ -1,0 +1,52 @@
+{
+  "reservas": [
+    {
+      "fechaReserva": "2023-09-30",
+      "tiempoReserva": "1 hora",
+      "horaReserva": "09:00",
+      "espacio": "Creación",
+      "id": 6
+    },
+    {
+      "fechaReserva": "2023-09-28",
+      "tiempoReserva": "1 hora",
+      "horaReserva": "08:00",
+      "espacio": "Percepción",
+      "id": 7
+    },
+    {
+      "fechaReserva": "2023-09-28",
+      "tiempoReserva": "1 hora",
+      "horaReserva": "09:00",
+      "espacio": "Percepción",
+      "id": 8
+    },
+    {
+      "fechaReserva": "2023-09-27T23:54:53.596Z",
+      "tiempoReserva": "",
+      "horaReserva": "",
+      "espacio": "",
+      "id": 9
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Melissa Alvarez",
+      "lastname": "Alvarez",
+      "email": "meli@gmail.com",
+      "password": "12345",
+      "dateBirth": "2023-09-05",
+      "profileImage": "https://media.istockphoto.com/id/1194465593/es/foto/joven-japonesa-luciendo-con-confianza.jpg?s=612x612&w=0&k=20&c=RSaCrSbxP5P6vC29gHx-omDiVwJrLMawxyQaM-pazqQ="
+    },
+    {
+      "id": 2,
+      "name": "Ana Alvarez",
+      "lastname": "Alvarez",
+      "email": "ana@gmail.com",
+      "password": "123456",
+      "dateBirth": "2023-08-05",
+      "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBddZW64KUA6pvUNkvCNTVKQuKYoyzye5keNN3T0PEbAQYc1WtC7lz5OlgAbsvyf7On_M&usqp=CAU"
+    }
+  ]
+}

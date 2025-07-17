@@ -1,0 +1,48 @@
+
+<div class="container mx-auto relative flex flex-col justify-center h-screen items-center">
+  <img class=" h-screen w-screen" src="assets/LAB1.png" alt="">
+    <div *ngIf="!reservaCancelada && !reservaConfirmada" class="absolute bg-white p-8 rounded-lg shadow-lg text-center">
+      <h2 class="text-3xl font-bold mb-4">Ya casi terminamos!</h2>
+        <p class="mb-2"><strong>Queremos confirmar que tu reserva si este correcta:</strong></p>
+    
+     
+        <p class="mb-2"><strong>Reservaste para el dia </strong> {{ reserva.fechaReserva | date }}</p>
+        <p class="mb-2"><strong>Tu reserva comienza a las</strong> {{ reserva.horaReserva }}</p>
+        <p class="mb-2"><strong>Tiene una duración de</strong> {{ reserva.tiempoReserva }}</p>
+        <p class="mb-4"><strong>En el espacio</strong> {{ reserva.espacio }}</p>
+        
+     
+      <div  class=" flex justify-center space-x-4">
+        <button class="bg-aguadegad text-white px-6 py-2 rounded hover:bg-opacity-70 focus:outline-none focus:ring focus:ring-green-300"(click)="confirmarReserva(reserva.id ?? 0)"> 
+         
+          Confirmar
+        </button>
+        <button class="bg-red-600 text-white px-6 py-2 rounded hover:bg-opacity-70 focus:outline-none focus:ring focus:ring-red-300" (click)="cancelarReserva(reserva.id ?? 0)">
+         
+          Cancelar
+        </button>
+       </div>
+
+    </div>
+
+    <div *ngIf="reservaCancelada" class=  "absolute bg-white p-8 rounded-lg shadow-lg text-center text-black  mb-4 items-center">
+      <p>Su reserva ha sido cancelada.</p>
+      <button [routerLink]="['/landing']"   class="bg-aguadegad hover:bg-opacity-50 text-white  px-2 py-1 rounded focus:ring-green-300 " (click)="cerrarMensajeCancelacion()">Regresar a inicio</button>
+      
+  </div>
+
+
+  <div *ngIf="reservaConfirmada" class="absolute space-x-4 bg-white p-8 rounded-lg shadow-lg text-center text-black  mb-4 items-center">
+    <p>Su reserva ha sido confirmada.</p>        
+    <button   [routerLink]="['/landing']" class="  bg-aguadegad hover:bg-opacity-50 text-white  px-2 py-1 rounded focus:ring-green-300" (click)="cerrarMensajeConfirmacion()">Regresar al inicio</button>
+    <button [routerLink]="['/misreservas']"   class="bg-aguadegad hover:bg-opacity-50 text-white  px-2 py-1 rounded focus:ring-green-300 " (click)="cerrarMensajeCancelacion()">Ver mis reservas</button>
+      
+  </div>
+    
+
+
+
+
+  </div>
+  
+

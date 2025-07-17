@@ -1,0 +1,97 @@
+<app-header></app-header>
+
+<div class="p-4 text-black items-center md:items-start w-full flex justify-center flex-col md:flex-row-reverse">
+    <section class=" mb-4 max-w-full w-96 p-8  border-2 border-aguadegad rounded-lg">
+      <img class="mb-4 " src="assets/BgImage.jpg" alt="">
+      <h2 class="text-white text-3xl font-bo.ld mb-4 text-center bg-gradient-to-r from-aguadegad to bg-azuldegra">
+        Activate!</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="signUp()">
+        <label for="name" class="block">
+          <span>Nombre</span>
+          <input type="text"class="text-black mt-1 block w-full rounded-lg border-gray-300 shadow-sm
+          focus:border-aguadegad focus:ring-opacity-50" [ngClass]="{'border-red-600': name.invalid && (name.dirty || name.touched) }"
+          name="name" id="name" formControlName="name" required>
+            <div *ngIf="name.invalid && (name!.dirty || name.touched)" class="text-red-600 mt-1">
+            <div *ngIf="name.errors?.['required']">
+              Name is required.
+            </div>
+          </div>
+        </label>
+  
+        <label for="lastName" class="block">
+          <span>Apellido</span>
+          <input type="text"
+            class=" text-black mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-aguadegad focus:ring-opacity-50"
+            [ngClass]="{'border-red-600': lastName.invalid && (lastName.dirty || lastName.touched) }"
+            name="lastName" id="lastName" formControlName="lastName"required>
+            <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="text-red-600 mt-1">
+              <div *ngIf="lastName.errors?.['required']">
+                Last name is required.
+              </div>
+            </div>
+        </label>
+  
+  
+        <label for="email" class="block">
+          <span>Email</span>
+          <input type="text"
+            class=" text-black mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-aguadegad focus:ring-opacity-50"
+            [ngClass]="{'border-red-600': email.invalid && (email.dirty || email.touched) }"
+            name="email" id="email" formControlName="email" required>
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-red-600 mt-1">
+              <div *ngIf="email.errors?.['required']">
+                Email is required.
+              </div>
+              <div *ngIf="email.errors?.['email']">
+                Email invalid.
+              </div>
+            </div>
+        </label>
+  
+  
+        <label for="password">
+          <span>Password</span>
+          <input type="password"
+            class=" text-black mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-aguadegad focus:ring-opacity-50"
+            [ngClass]="{'border-red-600': password.invalid && (password.dirty || password.touched) }"
+            name="password" id="password" formControlName="password" required>
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-red-600 mt-1">
+              <div *ngIf="password.errors?.['required']">
+                Password is required.
+              </div>
+            </div>
+        </label>
+  
+  
+        <label for="dateBirth">
+          <span>Fecha de nacimiento</span>
+          <input type="date"
+            class=" text-black mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-aguadegad focus:ring-opacity-50"
+            name="dateBirth" id="dateBirth" formControlName="dateBirth">
+        </label>
+  
+        <button
+          class="text-white mt-5 text-xl font-bold py-3 px-5 cursor-pointer rounded-full bg-aguadegad hover:bg-azuldegra w-full disabled:cursor-not-allowed disabled:bg-gray-300" type="submit" [disabled]="registerForm.invalid">
+          <fa-icon [icon]="faIdCard"></fa-icon>Registrarse</button>
+  
+      </form>
+    </section>
+    <section class=" md:pt-24 " >
+        <div class="text-5xl mr-5">
+          <h1>Regístrate y disfruta de nuestros <br> espacios disponibles.</h1>
+        </div>
+        <div class="text-3xl">
+          <ul class="mt-5">
+            <li class="mt-10"><fa-icon [icon]="faCircleCheck" class="mr-5 text-aguadegad"></fa-icon>Registro rápido.</li>
+            <li class="mt-10"><fa-icon [icon]="faCircleCheck" class="mr-5 text-aguadegad"></fa-icon>Navega fácil.</li>
+            <li class="mt-10"><fa-icon [icon]="faCircleCheck" class="mr-5 text-aguadegad"></fa-icon>Para personas o empresas
+              externas.</li>
+            <li class="mt-10"><fa-icon [icon]="faCircleCheck" class="mr-5 text-aguadegad"></fa-icon>Diferentes espacios
+              disponibles.</li>
+            <li class="mt-10"><fa-icon [icon]="faCircleCheck" class="mr-5 text-aguadegad"></fa-icon>Espacios agradables.
+            </li>
+          </ul>
+        </div>
+      </section>
+    
+  </div>
